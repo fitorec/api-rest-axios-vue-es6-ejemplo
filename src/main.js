@@ -1,9 +1,9 @@
 import Vue from 'vue'
 import App from './App.vue'
 // Importamos y usamos la API
-// import {ApiVue} from './Api/ApiBase';
-// Vue.use(ApiVue);
-
+import {ApiVue} from './Api/Api';
+Vue.use(ApiVue);
+// Debug
 Vue.config.productionTip = false
 
 new Vue({

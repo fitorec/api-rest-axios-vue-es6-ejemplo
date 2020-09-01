@@ -1,7 +1,10 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <Home msg="Welcome to Your Vue.js App"/>
+    <input type="text" placeholder="Buscar una carta" v-model="q">
+    <button class="btn">
+      🔍 Buscar
+    </button>
+    <Home :query="q"/>
   </div>
 </template>
 
@@ -10,6 +13,9 @@ import Home from './components/Home'
 
 export default {
   name: 'App',
+  data: function (){
+    return {q: ""};
+  },
   components: {
     Home
   }
